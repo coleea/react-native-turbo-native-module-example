@@ -5,6 +5,7 @@ import {
   Text,
   TextInput,
   Button,
+  AppRegistry,
 } from 'react-native';
 
 import NativeLocalStorage from './specs/NativeLocalStorage';
@@ -40,6 +41,7 @@ function App(): React.JSX.Element {
 
   return (
     <SafeAreaView style={{flex: 1}}>
+      {/* <Text>This is Turbo Native Module Test</Text> */}
       <Text style={styles.text}>
         Current stored value is: {value ?? 'No Value'}
       </Text>
@@ -70,5 +72,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
 });
+
+AppRegistry.registerComponent('nativelocalstorage', () => App);
 
 export default App;
