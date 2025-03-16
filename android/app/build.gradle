@@ -77,9 +77,12 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.reactnativeturbomoduleexample"
+    namespace "com.inappmodule"
+    buildFeatures  {
+        buildConfig = true
+    }
     defaultConfig {
-        applicationId "com.reactnativeturbomoduleexample"
+        applicationId "com.inappmodule"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -104,7 +107,7 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
-    }
+    }    
 }
 
 dependencies {
