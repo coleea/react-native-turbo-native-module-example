@@ -6,18 +6,19 @@ import {
   TextInput,
   Button,
   AppRegistry,
+  Image,
 } from 'react-native';
 
 import NativeLocalStorage from './specs/NativeLocalStorage';
+// import { AnimatedComponent } from './src/AnimatedComponent';
+// import { AnimatedComponent } from './src/AnimatedComponent';
 
 const EMPTY = '<empty>';
 
 function App(): React.JSX.Element {
   const [value, setValue] = React.useState<string | null>(null);
 
-  const [editingValue, setEditingValue] = React.useState<
-    string | null
-  >(null);
+  const [editingValue, setEditingValue] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     const storedValue = NativeLocalStorage?.getItem('myKey');
@@ -41,6 +42,11 @@ function App(): React.JSX.Element {
 
   return (
     <SafeAreaView style={{flex: 1}}>
+      <Image source={require("./images/jsi.png")}
+      
+      
+      />
+      {/* <AnimatedComponent /> */}
       {/* <Text>This is Turbo Native Module Test</Text> */}
       <Text style={styles.text}>
         Current stored value is: {value ?? 'No Value'}
